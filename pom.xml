@@ -41,7 +41,7 @@
 				</executions>
 			</plugin>
 		</plugins>
-    <finalName>Simple_Maven</finalName>
+    <finalName>SimpleMaven</finalName>
   </build>
   <properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
