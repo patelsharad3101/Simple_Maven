@@ -25,9 +25,7 @@
 			<tr>
 				<th>Name  <i class="far fa-user"></i> : </th>
 				<td><input type="text" class="form-control form-rounded" name="fname" maxlength="20" placeholder="Enter First Name" required></td>
-			</tr>
-			
-			
+			</tr>	
 	</table>
 		<input type="submit" name="submit" class="btn btn-success" style="border-radius: 10px; box-shadow: 0px;" value="Submit">
 	</form>
