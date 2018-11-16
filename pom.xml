@@ -22,11 +22,30 @@
     <scope>provided</scope>
 </dependency>
   </dependencies>
-  <properties>
-  <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-  </properties>
   <build>
+    <plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<configuration>
+							<attachClasses>true</attachClasses>
+							<webXml>${basedir}/src/main/webapp/WEB-INF/web.xml</webXml>
+						</configuration>
+						<goals>
+							<goal>inplace</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
     <finalName>Simple_Maven</finalName>
   </build>
+  <properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<failOnMissingWebXml>false</failOnMissingWebXml>
+	</properties>
 </project>
